@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/saveFile"
+                android:layout_width="0dp"
+                android:layout_weight=".1"
+                android:layout_height="wrap_content"
+                android:src="@drawable/save_alt_black_24" />
+
+            <TextView
+                android:text="Exam"
+                android:layout_width="0dp"
+                android:layout_weight=".6"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:id="@+id/playBtn"
+                android:layout_width="0dp"
+                android:layout_weight=".1"
+                android:layout_height="wrap_content"
+                android:src="@drawable/play_arrow_black_24" />
+
+
+            <ImageView
+                android:id="@+id/pauseBtn"
+                android:layout_width="0dp"
+                android:layout_weight=".1"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:src="@drawable/pause_black_24" />
+            <ImageView
+                android:id="@+id/loopingNotClickBtn"
+                android:layout_width="0dp"
+                android:layout_weight=".1"
+                android:layout_height="wrap_content"
+                android:src="@drawable/repeat_black_24" />
+            <ImageView
+                android:id="@+id/loopingBtn"
+                android:layout_width="0dp"
+                android:layout_weight=".1"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:src="@drawable/repeat_black_24" />
+            <ImageView
+                android:id="@+id/loopingStopBtn"
+                android:layout_width="0dp"
+                android:layout_weight=".1"
+                android:visibility="gone"
+                android:tint="@color/colorAccent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/repeat_black_24" />
+            <ImageView
+                android:id="@+id/stopNotBtn"
+                android:layout_width="0dp"
+                android:layout_weight=".1"
+                android:enabled="false"
+                android:layout_height="wrap_content"
+                android:src="@drawable/close_black_24" />
+            <ImageView
+                android:id="@+id/stopBtn"
+                android:layout_width="0dp"
+                android:layout_weight=".1"
+                android:enabled="false"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:src="@drawable/close_black_24" />
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_pass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_due"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true" />
+
+            <SeekBar
+                android:id="@+id/seek_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_pass"
+                android:saveEnabled="false" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_pass1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_due1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true" />
+
+            <SeekBar
+                android:id="@+id/seek_bar1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:saveEnabled="false" />
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/classMusicList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingTop="8dp"
+
+            />
+    </LinearLayout>
+</LinearLayout>
